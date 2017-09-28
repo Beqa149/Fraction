@@ -2,20 +2,20 @@
 #include<iostream>
 using namespace std;
 
-
 //Default Constructor
 Fraction::Fraction()
 {
+	if (Comments)
+		cout << "Default Constructor" << endl;
 	Denominator = 1;
 	Numerator = 0;
 }
 
-
 //Overloaded Constructor
 Fraction::Fraction(int Numerator, int Denominator)
 {
-	/*cout << "Enter Numerator : " << Numerator;
-	cout << "Enter Denominator : " << Denominator;*/
+	if(Comments)
+		cout << "Overloaded Constructor" << endl;
 	if (!(Denominator == 0))
 	{
 		this->Denominator = Denominator;
@@ -43,9 +43,13 @@ void Fraction::Normalize()
 
 	Denominator /= gcd;
 	Numerator /= gcd;
+
+	if(Denominator < 0)
+	{
+		Denominator *= -1;
+		Numerator *= -1;
+	}
 }
-
-
 
 void Fraction::Show()
 {
@@ -91,9 +95,9 @@ Fraction Fraction::Multiply(Fraction _fraction)
 
 Fraction::~Fraction()
 {
-	cout << "Destructor " << endl;
+	if(Comments)
+		cout << "Destructor " << endl;
 }
-
 
 //Overloaded Class + Operator
 Fraction Fraction::operator+(const Fraction & _fraction)
