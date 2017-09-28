@@ -123,3 +123,18 @@ Fraction Fraction::operator*(const Fraction & _fraction)
 {
 	return Fraction(this->Numerator * _fraction.Numerator, this->Denominator * _fraction.Denominator);
 }
+
+Fraction::operator double()
+{
+	return double(Numerator) / double(Denominator);
+}
+
+Fraction::operator int()
+{
+	return Numerator /Denominator;
+}
+
+Fraction::operator float()
+{
+	return float(Numerator) / float(Denominator);
+}
