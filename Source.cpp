@@ -13,6 +13,12 @@ int main()
 	f3.Show();
 	Fraction c = f2 + f3;
 	c.Show();
+	c = f2 - f3;
+	c.Show();
+	c = f2 / f3;
+	c.Show();
+	c = f2*f3;
+	c.Show();
 	cin.get();
 	return 0;
 
