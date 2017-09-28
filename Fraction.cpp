@@ -95,9 +95,27 @@ Fraction::~Fraction()
 }
 
 
-//Overloaded Class Operator
+//Overloaded Class + Operator
 Fraction Fraction::operator+(const Fraction & _fraction)
 {
 
 	return Fraction((this->Numerator * _fraction.Denominator) + (this->Denominator * _fraction.Numerator), (this->Denominator * _fraction.Denominator));
+}
+
+//Overloaded Class - Operator
+Fraction Fraction::operator-(const Fraction & _fraction)
+{
+	return Fraction((this->Numerator * _fraction.Denominator) - (this->Denominator * _fraction.Numerator), (this->Denominator * _fraction.Denominator));
+}
+
+//Overloaded Class / Operator
+Fraction Fraction::operator/(const Fraction & _fraction)
+{
+	return Fraction(this->Numerator * _fraction.Denominator, this->Denominator * _fraction.Numerator);
+}
+
+//Overloaded Class * Operator
+Fraction Fraction::operator*(const Fraction & _fraction)
+{
+	return Fraction(this->Numerator * _fraction.Numerator, this->Denominator * _fraction.Denominator);
 }
