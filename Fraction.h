@@ -7,7 +7,7 @@ private:
 	int Numerator;
 
 	int GCD(int, int);
-
+	static bool Comments;
 public:
 	Fraction();
 	Fraction(int Denominator, int Numerator);
@@ -32,4 +32,9 @@ public:
 
 	//Overloaded Class * Operator
 	Fraction operator * (const Fraction &);
+
+	//Overloaded Double Operator
+	operator double();
+	operator int();
+	operator float();
 };
