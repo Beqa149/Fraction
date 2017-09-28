@@ -62,6 +62,7 @@ Fraction Fraction::Add(Fraction _fraction)
 	return result;
 }
 
+//Subtract
 Fraction Fraction::Subtract(Fraction _fraction)
 {
 	Fraction result;
@@ -70,6 +71,7 @@ Fraction Fraction::Subtract(Fraction _fraction)
 	return result;
 }
 
+//Divide
 Fraction Fraction::Divide(Fraction _fraction)
 {
 	Fraction result;
@@ -78,10 +80,24 @@ Fraction Fraction::Divide(Fraction _fraction)
 	return result;
 }
 
+//Multiplay
 Fraction Fraction::Multiply(Fraction _fraction)
 {
 	Fraction result;
 	result.Numerator = (this->Numerator * _fraction.Numerator);		
 	result.Denominator = (this->Denominator * _fraction.Denominator);
 	return result;
+}
+
+Fraction::~Fraction()
+{
+	cout << "Destructor " << endl;
+}
+
+
+//Overloaded Class Operator
+Fraction Fraction::operator+(const Fraction & _fraction)
+{
+
+	return Fraction((this->Numerator * _fraction.Denominator) + (this->Denominator * _fraction.Numerator), (this->Denominator * _fraction.Denominator));
 }
