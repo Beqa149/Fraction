@@ -9,6 +9,8 @@ public:
 	Fraction();
 	Fraction(int Denominator, int Numerator);
 	Fraction(const Fraction &);
+	int GCD(int, int);
+	void Normalize();
 	void Show();
 	Fraction Add(Fraction _fraction);
 	Fraction Subtract(Fraction _fraction);
