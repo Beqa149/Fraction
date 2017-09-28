@@ -12,7 +12,7 @@ Fraction::Fraction()
 
 
 //Overloaded Constructor
-Fraction::Fraction(int Denominator, int Numerator)
+Fraction::Fraction(int Numerator, int Denominator)
 {
 	/*cout << "Enter Numerator : " << Numerator;
 	cout << "Enter Denominator : " << Denominator;*/
@@ -23,6 +23,7 @@ Fraction::Fraction(int Denominator, int Numerator)
 	}
 	else
 		cout << "Incorrect Denominator! " << endl;
+	Normalize();
 }
 
 Fraction::Fraction(const Fraction & f)
@@ -30,6 +31,21 @@ Fraction::Fraction(const Fraction & f)
 	Denominator = f.Denominator;
 	Numerator = f.Numerator;
 }
+
+int Fraction::GCD(int a , int b)
+{
+	return b == 0 ? a : GCD(b, a%b);
+}
+
+void Fraction::Normalize()
+{
+	int gcd = GCD(Numerator, Denominator);
+
+	Denominator /= gcd;
+	Numerator /= gcd;
+}
+
+
 
 void Fraction::Show()
 {
