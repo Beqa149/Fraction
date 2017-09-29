@@ -2,23 +2,20 @@
 #include<iostream>
 using namespace std;
 
-
+bool Fraction::Comments = false;
 
 int main()
 {
-
-	Fraction f2(8,16);
-	Fraction f3(7,21);
+	Fraction f2(1,5);
+	Fraction f3(0.5);
 	f2.Show();
 	f3.Show();
-	Fraction c = f2 + f3;
+	Fraction c;
+
+	c = f2;
 	c.Show();
-	c = f2 - f3;
-	c.Show();
-	c = f2 / f3;
-	c.Show();
-	c = f2*f3;
-	c.Show();
+	
+
 	cin.get();
 	return 0;
 
