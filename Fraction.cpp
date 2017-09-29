@@ -11,6 +11,18 @@ Fraction::Fraction()
 	Numerator = 0;
 }
 
+//Overloaded Constructor With Double
+Fraction::Fraction(double f)
+{
+	int tens = 1;
+	while ( int(f*10) != f*tens )
+		tens *= 10;
+
+	Numerator = int(f * 10);
+	Denominator = tens;
+	Normalize();
+}
+
 //Overloaded Constructor
 Fraction::Fraction(int Numerator, int Denominator)
 {
@@ -122,6 +134,36 @@ Fraction Fraction::operator/(const Fraction & _fraction)
 Fraction Fraction::operator*(const Fraction & _fraction)
 {
 	return Fraction(this->Numerator * _fraction.Numerator, this->Denominator * _fraction.Denominator);
+}
+
+bool Fraction::operator<(const Fraction & _fraction)
+{
+	return double(*this) < double(Fraction(_fraction));
+}
+
+bool Fraction::operator>(const Fraction & _fraction)
+{
+	return double(*this) > double(Fraction(_fraction));;
+}
+
+bool Fraction::operator<=(const Fraction & _fraction)
+{
+	return double(*this) <= double(Fraction(_fraction));;
+}
+
+bool Fraction::operator>=(const Fraction & _fraction)
+{
+	return double(*this) >= double(Fraction(_fraction));;
+}
+
+bool Fraction::operator==(const Fraction & _fraction)
+{
+	return Numerator == _fraction.Numerator && Denominator == _fraction.Denominator;
+}
+
+bool Fraction::operator!=(const Fraction & _fraction)
+{
+	return !(*this ==_fraction);
 }
 
 Fraction::operator double()
