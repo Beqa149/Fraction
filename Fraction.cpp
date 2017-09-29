@@ -57,7 +57,7 @@ void Fraction::Show()
 }
 
 //Addition
-Fraction Fraction::Add(Fraction _fraction)
+Fraction Fraction::Add(Fraction & _fraction)
 {
 	Fraction result;
 	result.Numerator = ( this->Numerator * _fraction.Denominator ) + ( this->Denominator * _fraction.Numerator );
@@ -67,7 +67,7 @@ Fraction Fraction::Add(Fraction _fraction)
 }
 
 //Subtract
-Fraction Fraction::Subtract(Fraction _fraction)
+Fraction Fraction::Subtract(Fraction  &_fraction)
 {
 	Fraction result;
 	result.Numerator = (this->Numerator * _fraction.Denominator) - (this->Denominator * _fraction.Numerator);
@@ -76,7 +76,7 @@ Fraction Fraction::Subtract(Fraction _fraction)
 }
 
 //Divide
-Fraction Fraction::Divide(Fraction _fraction)
+Fraction Fraction::Divide(Fraction & _fraction)
 {
 	Fraction result;
 	result.Numerator = (this->Numerator * _fraction.Denominator);
@@ -85,7 +85,7 @@ Fraction Fraction::Divide(Fraction _fraction)
 }
 
 //Multiplay
-Fraction Fraction::Multiply(Fraction _fraction)
+Fraction Fraction::Multiply(Fraction  &_fraction)
 {
 	Fraction result;
 	result.Numerator = (this->Numerator * _fraction.Numerator);		
