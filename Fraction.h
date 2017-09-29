@@ -10,6 +10,7 @@ private:
 	static bool Comments;
 public:
 	Fraction();
+	Fraction(double);
 	Fraction(int Denominator, int Numerator);
 	Fraction(const Fraction &);
 	void Normalize();
@@ -32,6 +33,24 @@ public:
 
 	//Overloaded Class * Operator
 	Fraction operator * (const Fraction &);
+
+	//Overloaded < Operator
+	bool operator < (const Fraction &);
+
+	//Overloaded > Operator
+	bool operator > (const Fraction &);
+
+	//Overloaded <= Operator
+	bool operator <= (const Fraction &);
+
+	//Overloaded >= Operator
+	bool operator >= (const Fraction &);
+
+	//Overloaded == Operator
+	bool operator == (const Fraction &);
+
+	//Overloaded != Operator
+	bool operator != (const Fraction &);
 
 	//Overloaded Double Operator
 	operator double();
