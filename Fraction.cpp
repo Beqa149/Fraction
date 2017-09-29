@@ -68,6 +68,13 @@ void Fraction::Show()
 	cout << "Your Fraction Is : " << Numerator << "/" << Denominator << endl;
 }
 
+Fraction & Fraction::operator=(const Fraction & _fraction)
+{
+	Numerator = _fraction.Numerator;
+	Denominator = _fraction.Denominator;
+	return *this;
+}
+
 //Addition
 Fraction Fraction::Add(Fraction & _fraction)
 {
