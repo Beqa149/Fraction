@@ -17,6 +17,9 @@ public:
 	void Show();
 	~Fraction();
 
+	//Overloaded Asignment Operator
+	Fraction & operator=(const Fraction &);
+
 	Fraction Add(Fraction & _fraction);
 	Fraction Subtract(Fraction & _fraction);
 	Fraction Divide(Fraction & _fraction);
