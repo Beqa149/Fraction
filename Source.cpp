@@ -6,16 +6,14 @@ bool Fraction::Comments = false;
 
 int main()
 {
-	Fraction f2(1,5);
-	Fraction f3(0.5);
-	f2.Show();
-	f3.Show();
-	Fraction c;
-
-	c = f2;
+	Fraction c(3,2);
+	Fraction a(1,2);
+	
 	c.Show();
 	
+	c++.Show();
 
+	c.Show();
 	cin.get();
 	return 0;
 
