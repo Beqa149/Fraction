@@ -173,6 +173,34 @@ bool Fraction::operator!=(const Fraction & _fraction)
 	return !(*this ==_fraction);
 }
 
+Fraction & Fraction::operator++()
+{
+	Numerator += Denominator;
+	return *this;
+}
+
+Fraction & Fraction::operator--()
+{
+	Numerator -= Denominator;
+	return *this;
+}
+
+Fraction Fraction::operator++(int)
+{
+	Fraction f = *this;
+	Numerator += Denominator;
+	//++(*this);
+	return f;
+}
+
+Fraction Fraction::operator--(int)
+{
+	Fraction f = *this;
+	Numerator -= Denominator;
+	//++(*this);
+	return f;
+}
+
 Fraction::operator double()
 {
 	return double(Numerator) / double(Denominator);
