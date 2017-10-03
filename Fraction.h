@@ -55,8 +55,21 @@ public:
 	//Overloaded != Operator
 	bool operator != (const Fraction &);
 
+	// Overloaded Prefix Increment Operator
+	Fraction & operator ++ ();
+
+	// Overloaded Prefix Decrement Operator
+	Fraction & operator -- ();
+
+	// Overloaded Postfix Increment Operator
+	Fraction operator ++ (int);
+
+	// Overloaded Postfix Decrement Operator
+	Fraction operator -- (int);
+
 	//Overloaded Double Operator
 	operator double();
 	operator int();
 	operator float();
+
 };
