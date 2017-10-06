@@ -54,7 +54,10 @@ public:
 
 	//Overloaded != Operator
 	bool operator != (const Fraction &);
-
+	
+	//Overloaded << Operator
+	friend ostream &operator<<(ostream &output, const Fraction &f);
+	
 	// Overloaded Prefix Increment Operator
 	Fraction & operator ++ ();
 
