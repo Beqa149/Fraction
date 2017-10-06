@@ -215,3 +215,9 @@ Fraction::operator float()
 {
 	return float(Numerator) / float(Denominator);
 }
+
+ostream &operator<<(ostream &output, const Fraction &f)
+{
+	output << f.Numerator << "/" << f.Denominator;
+	return output;
+}
